@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button'
 import {
     Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
@@ -15,6 +14,7 @@ import { SignupValidation } from "@/lib/validation"
 import { z } from "zod"
 import Loader from "@/components/shared/Loader"
 import { Link } from "react-router-dom"
+import { createUserAccount } from "@/lib/appwrite/api"
 
 const SignupForm = () => {
 
@@ -33,10 +33,9 @@ const SignupForm = () => {
 
     // 2. Define a submit handler.
     async function onSubmit(values: z.infer<typeof SignupValidation>) {
-        // Create user
-        // const newUser = await createUserAccount(values)
+        const newUser = await createUserAccount(values)
 
-        console.log(values)
+        console.log(newUser);
     }
 
     return (
