@@ -14,17 +14,17 @@ import GridPostList from "@/components/shared/GridPostList";
 import { LikedPosts } from ".";
 import { useUserContext } from "@/context/AuthContext";
 
-type StatBlockProps = {
-    value: string | number;
-    label: string;
-}
+// type StatBlockProps = {
+//     value: string | number;
+//     label: string;
+// }
 
-const StatBlock = ({ value, label }: StatBlockProps) => (
-    <div className="flex-center gap-2">
-        <p className="small-semibold lg:body-bold text-primary-500">{value}</p>
-        <p className="small-medium lg:base-medium text-light-2">{label}</p>
-    </div>
-);
+// const StatBlock = ({ value, label }: StatBlockProps) => (
+//     <div className="flex-center gap-2">
+//         <p className="small-semibold lg:body-bold text-primary-500">{value}</p>
+//         <p className="small-medium lg:base-medium text-light-2">{label}</p>
+//     </div>
+// );
 
 const Profile = () => {
     const { id } = useParams();
